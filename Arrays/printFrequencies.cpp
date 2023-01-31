@@ -2,7 +2,7 @@
 using namespace std;
 
 // Time Complexity --> O(n)
-// Auxilary Space --> O(1)
+// Auxilary Space --> O(n)
 
 void printFrequencies(int arr[], auto n){
     int minEl = INT_MAX;
