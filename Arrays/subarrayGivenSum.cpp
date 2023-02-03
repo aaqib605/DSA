@@ -4,7 +4,7 @@ using namespace std;
 // Time Complexity --> O(n)
 // Auxilary Space --> O(1)
 
-bool maxConsecutiveSum(int arr[], auto n, int sum, int k) {
+bool subarrayGivenSum(int arr[], auto n, int sum, int k) {
     int currSum = 0;
     for(int i = 0; i < k; i++){
         currSum += arr[i];
@@ -23,7 +23,7 @@ int main() {
     // Function checks if there exists a subarray of size k with given sum
     int arr[] = {1, 8, 30, -5, 20, 7};
     auto n = sizeof(arr) / sizeof(arr[0]);
-    cout << maxConsecutiveSum(arr, n, 38, 3) << endl;
+    cout << subarrayGivenSum(arr, n, 38, 3) << endl;
     
     return 0;
 }
