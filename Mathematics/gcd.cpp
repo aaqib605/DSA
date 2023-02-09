@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Time complexity --> O(a % b)
+// Time complexity --> O(log(min(a, b))
 // Auxilary Space --> O(1)
 
 int hcf(int a, int b){
