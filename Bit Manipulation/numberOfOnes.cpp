@@ -14,7 +14,7 @@ int numberOfOnes(int n){
 }
 
 int main(){
-    // Function returns the number of 1's in the binary representation of a number
+    // Function returns the number of 1's in the binary representation of a number (Brian Kernighan's Algo)
     cout << numberOfOnes(7) << endl;
     return 0;
 }
