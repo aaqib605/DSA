@@ -48,9 +48,9 @@ int lastOccurence(int arr[], int start, auto end, int key){
 
 int countOccurences(int arr[], int start, auto end, int key){
     int first = firstOccurence(arr, start, end, key);
-    int last = lastOccurence(arr, start, end, key);
+    if(first == -1) return 0;
     
-    if(first == -1 || last == -1) return 0;
+    int last = lastOccurence(arr, start, end, key);
     
     return (last - first) + 1;
 }
