@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Time Complexity --> O(n + m)
+// Time Complexity --> O(n^2)
 // Auxilary Space --> O(1)
 
 void rotateMatrix(int arr[3][3]){
