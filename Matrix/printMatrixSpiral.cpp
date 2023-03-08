@@ -16,36 +16,36 @@ void printMatrixSpiral(int matrix[4][4]){
     int sc = 0;
     int ec = col - 1;
     
-    while(count < totalElements){
-        
-        // Printing starting row
-        for(int i = sc; (count < totalElements && i <= ec); i++){
-            cout << matrix[sr][i] << " ";
-            count++;
+    while(count < totalElements){ 
+            
+            // Printing starting row
+            for(int i = sc; (count < totalElements && i <= ec); i++){
+                cout << matrix[sr][i] << " ";
+                count++;
+            }
+            sr++;
+            
+            // Printing ending col
+            for(int i = sr; (count < totalElements && i <= er); i++){
+                cout << matrix[i][ec] << " ";
+                count++;
+            }
+            ec--;
+            
+            // Printing ending row
+            for(int i = ec; (count < totalElements && i >= sc); i--){
+                cout << matrix[er][i] << " ";
+                count++;
+            }
+            er--;
+            
+            // Printing starting col
+            for(int i = er; (count < totalElements && i >= sr); i--){
+                cout << matrix[i][sc] << " ";
+                count++;
+            }
+            sc++;
         }
-        sr++;
-        
-        // Printing ending col
-        for(int i = sr; (count < totalElements && i <= er); i++){
-            cout << matrix[i][ec] << " ";
-            count++;
-        }
-        ec--;
-        
-        // Printing ending row
-        for(int i = ec; (count < totalElements && i >= sc); i--){
-            cout << matrix[er][i] << " ";
-            count++;
-        }
-        er--;
-        
-        // Printing starting col
-        for(int i = er; (count < totalElements && i >= sr); i--){
-            cout << matrix[i][sc] << " ";
-            count++;
-        }
-        sc++;
-    }
     cout << endl;
 }
 
