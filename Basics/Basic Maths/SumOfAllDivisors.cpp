@@ -1,33 +1,29 @@
-int helper(int num)
+int sumOfAllDivisors(int n)
 {
-    int sumOfDivisors = 0;
+    int ans = 0;
 
-    if (num == 1)
-        return 1;
-
-    for (int i = 1; i <= sqrt(num); i++)
+    // Iterating over all 'i'.
+    for (int i = 1; i <= n; i++)
     {
-        if (num % i == 0)
+
+        // Calculating the value of ’sumOfDivisors(i)’ for current 'i'.
+        for (int j = 1; j * j <= i; j++)
         {
-            sumOfDivisors += i;
-            if ((num / i) != i)
+            if (i % j == 0)
             {
-                sumOfDivisors += (num / i);
+
+                // Avoid counting sqrt(i) twice.
+                if (i / j == j)
+                {
+                    ans += j;
+                }
+                else
+                {
+                    ans += j + i / j;
+                }
             }
         }
     }
 
-    return sumOfDivisors;
-}
-
-int sumOfAllDivisors(int n)
-{
-    int totalSum = 0;
-
-    for (int i = 1; i <= n; i++)
-    {
-        totalSum += helper(i);
-    }
-
-    return totalSum;
+    return ans;
 }
